@@ -1,75 +1,177 @@
-
-<!DOCTYPE html>
+<!doctype html>
 <html lang="bn">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>HSC ICT 2027 | Safollo Study Center</title>
-<style>
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: #f1f8f3;
-  color: #183c2c;
-  text-align: center;
-}
-header {
-  background: #176b45;
-  color: white;
-  padding: 30px 15px;
-}
-main {
-  max-width: 750px;
-  margin: 25px auto;
-  padding: 15px;
-}
-.card {
-  background: white;
-  padding: 22px;
-  margin: 15px 0;
-  border-radius: 14px;
-  box-shadow: 0 3px 12px #0001;
-}
-button {
-  background: #176b45;
-  color: white;
-  border: 0;
-  padding: 12px 22px;
-  border-radius: 8px;
-  cursor: pointer;
-}
-footer {
-  padding: 20px;
-  color: #557;
-}
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#176b45">
+  <meta name="description" content="Safollo Study Center HSC ICT Interactive Book 2027 - Chapter 03">
+  <title>HSC ICT 2027 | Safollo Study Center</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header>
-  <h1>SAFOLLO STUDY CENTER</h1>
-  <h2>HSC ICT Interactive Book 2027</h2>
-  <p>Unus Ali Sir | Lecturer-ICT</p>
-</header>
-<main>
-  <div class="card">
-    <h2>স্বাগতম শিক্ষার্থী!</h2>
-    <p>তোমার ইন্টারেক্টিভ ICT বইয়ে স্বাগতম।</p>
-  </div>
-  <div class="card">
-    <h3>অধ্যায় ৩: সংখ্যা পদ্ধতি ও ডিজিটাল ডিভাইস</h3>
-    <p>বাইনারি সংখ্যা, যোগ-বিয়োগ এবং ডিজিটাল লজিক শিখুন।</p>
-    <button onclick="alert('অধ্যায় ৩ খুব শিগগিরই যুক্ত হবে!')">
-      অধ্যায় পড়ুন
-    </button>
-  </div>
-  <div class="card">
-    <h3>অনলাইন কুইজ</h3>
-    <p>ICT জ্ঞান যাচাই করুন।</p>
-    <button onclick="alert('কুইজ শিগগিরই আসছে!')">
-      কুইজ শুরু
-    </button>
-  </div>
-</main>
-<footer>© 2027 Safollo Study Center</footer>
+  <header class="topbar">
+    <a class="brand" href="#home" aria-label="Safollo Study Center home">
+      <span class="brand-mark">S</span>
+      <span><strong>SAFOLLO</strong><small>STUDY CENTER</small></span>
+    </a>
+    <button class="menu-toggle" id="menuToggle" aria-label="মেনু খুলুন">☰</button>
+    <nav id="mainNav">
+      <a href="#home" class="active">হোম</a>
+      <a href="#lessons">পাঠ</a>
+      <a href="#simulator">সিমুলেটর</a>
+      <a href="#logic">লজিক গেট</a>
+      <a href="#quiz">কুইজ</a>
+      <a href="#creative">সৃজনশীল</a>
+      <a href="#resources">রিসোর্স</a>
+    </nav>
+    <button class="theme-btn" id="themeToggle" title="থিম পরিবর্তন">☾</button>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-copy">
+        <span class="eyebrow">HSC ICT • 2027 EDITION</span>
+        <h1>ইন্টারেক্টিভ ICT<br><em>শিখি আনন্দে</em></h1>
+        <p>সংখ্যা পদ্ধতি, ডিজিটাল ডিভাইস ও লজিক গেট—পড়ুন, অনুশীলন করুন, নিজেকে যাচাই করুন।</p>
+        <div class="hero-actions">
+          <a class="btn btn-gold" href="#lessons">পড়াশোনা শুরু করুন →</a>
+          <a class="btn btn-outline" href="#quiz">কুইজ দিন</a>
+        </div>
+        <div class="teacher"> <span class="teacher-dot">UA</span><span><b>Unus Ali Sir</b><small>Lecturer-ICT</small></span></div>
+      </div>
+      <div class="hero-art" aria-label="Binary numbers illustration">
+        <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+        <div class="binary-card"><span>0 1 0 1</span><strong>ICT</strong><span>1 0 1 0</span></div>
+        <div class="float-chip chip-a">1010₂</div><div class="float-chip chip-b">A₁₆</div>
+        <div class="float-chip chip-c">AND • OR • NOT</div>
+      </div>
+    </section>
+
+    <section class="stats">
+      <div><strong>০৩</strong><span>অধ্যায়</span></div>
+      <div><strong>০৪</strong><span>সংখ্যা পদ্ধতি</span></div>
+      <div><strong>০৬</strong><span>লজিক গেট</span></div>
+      <div><strong id="progressPercent">০%</strong><span>আপনার অগ্রগতি</span></div>
+    </section>
+
+    <section class="section" id="lessons">
+      <div class="section-heading"><div><span class="eyebrow">CHAPTER 03</span><h2>পাঠ্যবিষয়</h2></div><p>একটি বিষয় নির্বাচন করে শেখা শুরু করুন।</p></div>
+      <div class="lesson-grid">
+        <article class="lesson-card"><span class="lesson-icon">🔢</span><small>LESSON 01</small><h3>সংখ্যা পদ্ধতির পরিচিতি</h3><p>ভিত্তি, অঙ্ক, অবস্থানিক ও অনস্থানিক সংখ্যা পদ্ধতি।</p><button class="text-btn" data-lesson="intro">পাঠ খুলুন →</button></article>
+        <article class="lesson-card"><span class="lesson-icon">🔄</span><small>LESSON 02</small><h3>সংখ্যা রূপান্তর</h3><p>দশমিক, বাইনারি, অক্টাল ও হেক্সাডেসিমেলের রূপান্তর।</p><button class="text-btn" data-lesson="conversion">পাঠ খুলুন →</button></article>
+        <article class="lesson-card"><span class="lesson-icon">➕</span><small>LESSON 03</small><h3>বাইনারি যোগ ও বিয়োগ</h3><p>ক্যারি, ধার এবং ধাপে ধাপে গাণিতিক অনুশীলন।</p><button class="text-btn" data-lesson="binary">পাঠ খুলুন →</button></article>
+        <article class="lesson-card"><span class="lesson-icon">🧮</span><small>LESSON 04</small><h3>কমপ্লিমেন্ট</h3><p>১-এর পরিপূরক ও ২-এর পরিপূরক নির্ণয়।</p><button class="text-btn" data-lesson="complement">পাঠ খুলুন →</button></article>
+        <article class="lesson-card"><span class="lesson-icon">⚙️</span><small>LESSON 05</small><h3>লজিক গেট</h3><p>AND, OR, NOT, NAND, NOR, XOR ও XNOR।</p><button class="text-btn" data-lesson="logic">পাঠ খুলুন →</button></article>
+        <article class="lesson-card"><span class="lesson-icon">💡</span><small>LESSON 06</small><h3>ডিজিটাল ডিভাইস</h3><p>বুলিয়ান ধারণা ও ডিজিটাল সার্কিটের ভিত্তি।</p><button class="text-btn" data-lesson="digital">পাঠ খুলুন →</button></article>
+      </div>
+      <div class="lesson-view card hidden" id="lessonView">
+        <div class="lesson-view-head"><span class="eyebrow">LEARNING NOTE</span><button class="close-btn" id="closeLesson">✕</button></div>
+        <div id="lessonContent"></div>
+      </div>
+    </section>
+
+    <section class="section alt-section" id="simulator">
+      <div class="section-heading"><div><span class="eyebrow">PRACTICE LAB</span><h2>ইন্টারেক্টিভ সিমুলেটর</h2></div><p>নিজে ইনপুট দিয়ে ফলাফল দেখুন।</p></div>
+      <div class="tool-grid">
+        <div class="card tool-card">
+          <h3>সংখ্যা পদ্ধতি রূপান্তর</h3>
+          <p class="muted">একটি সংখ্যা লিখে তার ভিত্তি নির্বাচন করুন।</p>
+          <label for="convertInput">সংখ্যা</label><input id="convertInput" value="25" autocomplete="off">
+          <label for="fromBase">বর্তমান ভিত্তি</label><select id="fromBase"><option value="10">দশমিক (10)</option><option value="2">বাইনারি (2)</option><option value="8">অক্টাল (8)</option><option value="16">হেক্সাডেসিমেল (16)</option></select>
+          <button class="btn btn-primary" id="convertBtn">রূপান্তর করুন</button>
+          <div class="result-grid" id="conversionResult"><div><small>Binary</small><b>11001</b></div><div><small>Octal</small><b>31</b></div><div><small>Decimal</small><b>25</b></div><div><small>Hex</small><b>19</b></div></div>
+          <p class="feedback" id="convertFeedback" aria-live="polite"></p>
+        </div>
+        <div class="card tool-card">
+          <h3>বাইনারি যোগ-বিয়োগ</h3>
+          <p class="muted">সর্বোচ্চ ৮ বিটের বাইনারি সংখ্যা ব্যবহার করুন।</p>
+          <label for="binA">প্রথম সংখ্যা</label><input id="binA" value="1011" inputmode="numeric">
+          <label for="binB">দ্বিতীয় সংখ্যা</label><input id="binB" value="0101" inputmode="numeric">
+          <label for="binaryOperation">অপারেশন</label><select id="binaryOperation"><option value="add">যোগ (+)</option><option value="subtract">বিয়োগ (−)</option></select>
+          <button class="btn btn-primary" id="binaryBtn">হিসাব করুন</button>
+          <div class="binary-result" id="binaryResult" aria-live="polite">1011₂ + 0101₂ = <b>10000₂</b></div>
+          <p class="feedback" id="binaryFeedback"></p>
+        </div>
+        <div class="card tool-card">
+          <h3>১-এর ও ২-এর পরিপূরক</h3>
+          <p class="muted">বাইনারি ইনপুটের প্রতিটি বিট উল্টে দেখুন।</p>
+          <label for="complementInput">বাইনারি সংখ্যা</label><input id="complementInput" value="101001">
+          <button class="btn btn-primary" id="complementBtn">পরিপূরক নির্ণয়</button>
+          <div class="result-stack" id="complementResult"><p>১-এর পরিপূরক <b>010110</b></p><p>২-এর পরিপূরক <b>010111</b></p></div>
+          <p class="feedback" id="complementFeedback"></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="logic">
+      <div class="section-heading"><div><span class="eyebrow">DIGITAL LOGIC</span><h2>লজিক গেট ল্যাব</h2></div><p>ইনপুট বদলে আউটপুট পর্যবেক্ষণ করুন।</p></div>
+      <div class="card logic-lab">
+        <div class="logic-controls">
+          <label>গেট নির্বাচন<select id="gateSelect"><option>AND</option><option>OR</option><option>NOT</option><option>NAND</option><option>NOR</option><option>XOR</option><option>XNOR</option></select></label>
+          <label>ইনপুট A<select id="inputA"><option value="0">0 (OFF)</option><option value="1">1 (ON)</option></select></label>
+          <label id="inputBLabel">ইনপুট B<select id="inputB"><option value="0">0 (OFF)</option><option value="1">1 (ON)</option></select></label>
+        </div>
+        <div class="logic-output"><span id="gateExpression">A AND B</span><strong id="gateOutput">0</strong><small>OUTPUT</small></div>
+        <div class="truth-wrap"><h3>Truth Table</h3><div id="truthTable"></div></div>
+      </div>
+    </section>
+
+    <section class="section alt-section" id="quiz">
+      <div class="section-heading"><div><span class="eyebrow">TEST YOURSELF</span><h2>অধ্যায়ভিত্তিক MCQ পরীক্ষা</h2></div><p>প্রতিটি প্রশ্নের সঠিক উত্তর নির্বাচন করুন।</p></div>
+      <div class="card quiz-card">
+        <div class="quiz-top"><span id="quizCount">প্রশ্ন ১ / ১০</span><span id="quizScore">স্কোর: ০</span></div>
+        <div class="progress-track"><span id="quizProgress"></span></div>
+        <div id="quizQuestion" class="quiz-question"></div>
+        <div id="quizOptions" class="quiz-options"></div>
+        <div id="quizFeedback" class="feedback" aria-live="polite"></div>
+        <div class="quiz-actions"><button class="btn btn-primary" id="nextQuestion" disabled>পরবর্তী প্রশ্ন →</button><button class="btn btn-outline" id="restartQuiz">আবার শুরু</button></div>
+        <div id="quizSummary" class="quiz-summary hidden"></div>
+      </div>
+    </section>
+
+    <section class="section" id="creative">
+      <div class="section-heading"><div><span class="eyebrow">BOARD PREPARATION</span><h2>সৃজনশীল প্রশ্ন ও সমাধান</h2></div><p>উদ্দীপক পড়ে প্রশ্নের উত্তর অনুশীলন করুন।</p></div>
+      <div class="card creative-card">
+        <span class="eyebrow">উদ্দীপক</span>
+        <p>রাফি একটি কম্পিউটারে (25)₁₀ এবং (17)₈ দুটি সংখ্যা ব্যবহার করে। শিক্ষক তাকে সংখ্যা দুটিকে বাইনারিতে রূপান্তর করে যোগ করতে বললেন।</p>
+        <div class="creative-parts">
+          <div><b>ক.</b> সংখ্যা পদ্ধতির ভিত্তি কী?</div>
+          <div><b>খ.</b> অক্টাল সংখ্যা পদ্ধতিতে ৭-এর পরের সংখ্যা ১০ কেন? ব্যাখ্যা করো।</div>
+          <div><b>গ.</b> (25)₁₀ সংখ্যাটিকে বাইনারিতে রূপান্তর করো।</div>
+          <div><b>ঘ.</b> উদ্দীপকের দুটি সংখ্যার বাইনারি যোগ সম্পন্ন করে বিশ্লেষণ করো।</div>
+        </div>
+        <button class="btn btn-primary" id="showCreative">নমুনা সমাধান দেখুন</button>
+        <div id="creativeAnswer" class="answer-box hidden">
+          <h3>নমুনা সমাধান</h3>
+          <p><b>ক.</b> কোনো সংখ্যা পদ্ধতিতে ব্যবহৃত মৌলিক অঙ্কের মোট সংখ্যাকে ওই পদ্ধতির ভিত্তি বলে।</p>
+          <p><b>খ.</b> অক্টাল পদ্ধতির ভিত্তি ৮; এতে ০–৭ পর্যন্ত আটটি অঙ্ক ব্যবহৃত হয়। তাই ৭-এর পরের সংখ্যা ১০₈।</p>
+          <p><b>গ.</b> 25 ÷ 2 ধারাবাহিক ভাগের ভাগশেষ উল্টো করে পড়লে (11001)₂ পাওয়া যায়।</p>
+          <p><b>ঘ.</b> (17)₈ = (15)₁₀ = (1111)₂। অতএব 11001₂ + 01111₂ = 101000₂। দশমিক যাচাই: 25 + 15 = 40।</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt-section" id="resources">
+      <div class="section-heading"><div><span class="eyebrow">STUDY MATERIALS</span><h2>ভিডিও ক্লাস ও PDF নোট</h2></div><p>নিজস্ব রিসোর্সের লিংক এখানে যুক্ত করুন।</p></div>
+      <div class="resource-grid">
+        <div class="card resource-card"><span class="resource-icon">▶</span><h3>ভিডিও ক্লাস</h3><p>অধ্যায় ৩-এর ভিডিও ক্লাসের লিংক যুক্ত করার জায়গা।</p><a href="#" class="text-btn placeholder-link">ভিডিও লিংক যুক্ত হয়নি</a></div>
+        <div class="card resource-card"><span class="resource-icon">▤</span><h3>PDF নোট</h3><p>নিজের তৈরি PDF নোট বা হ্যান্ডআউট যুক্ত করুন।</p><a href="#" class="text-btn placeholder-link">PDF লিংক যুক্ত হয়নি</a></div>
+        <div class="card resource-card"><span class="resource-icon">✎</span><h3>বোর্ড প্রশ্ন</h3><p>বোর্ডভিত্তিক প্রশ্ন ও সমাধান সংযুক্ত করার জায়গা।</p><a href="#" class="text-btn placeholder-link">প্রশ্ন যুক্ত করুন</a></div>
+      </div>
+    </section>
+
+    <section class="section final-cta">
+      <div><span class="eyebrow">KEEP LEARNING</span><h2>প্রতিদিন একটু একটু করে<br>দক্ষতা বাড়াও।</h2><p>অনুশীলনই সাফল্যের চাবিকাঠি।</p></div>
+      <a class="btn btn-gold" href="#quiz">নিজেকে যাচাই করুন →</a>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="brand footer-brand"><span class="brand-mark">S</span><span><strong>SAFOLLO</strong><small>STUDY CENTER</small></span></div>
+    <p>HSC ICT Interactive Book 2027</p>
+    <p>শিক্ষক: <b>Unus Ali Sir, Lecturer-ICT</b></p>
+    <small>© 2027 Safollo Study Center. Educational learning resource.</small>
+  </footer>
+  <script src="app.js"></script>
 </body>
 </html>
